@@ -40,18 +40,8 @@ mouse = {
     event = function (x,y,b)
         local x = mouse.pos[1]
         local y = mouse.pos[2]
-        inv.mouseclick(x,y,b)
         if b == 1 then
-        if x > 295 and x <= 295+25 and y > 170 and y <= 170+25 then
-            for i = 1,#plr.inventory do
-                if plr.inventory[i].id=="ironore" then
-                    plr.inventory[i].id="crafttable"
-                    sfx.use("woodcut")
-                    break
-                end
-            end
         end
-    end
     end,
     mouseevent = function (x,y,b)
         mouse.event(x,y,b)
